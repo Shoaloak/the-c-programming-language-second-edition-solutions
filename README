@@ -1,2 +1,4 @@
-Solutions for "The C Programming Language"
+Solutions for "The C Programming Language, second edition"
 Also known by the authors initials, K&R.
+
+All solutions will be compiled with --ansi and written in K&R style.
