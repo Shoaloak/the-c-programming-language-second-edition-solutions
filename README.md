@@ -12,8 +12,8 @@ start with quit option to disable GPL disclaimer.
 alias gdb="gdb -q"
 ```
 
+### GDB commands:
 ```
-GDB commands:
 ----------------------------------------------------------------------
 stop gdb:                       quit (or q)
 run program with break @ main:  start
@@ -38,7 +38,8 @@ if e.g. printf messes up screen, hit Ctrl-l to repaint.
 
 ctrl+x 2 to create extra window with asm
 ctrl+x 1 to cycle back, ctrl+x2 to cycle forward
-ctrl+n or ctrl+p to cycle through previous commands
+ctrl+n or ctrl+p to cycle through (previous) commands since\
+    arrows move through code inside TUI
 ```
 
 ### GDB (>= 7) has Python!
@@ -47,4 +48,5 @@ ctrl+n or ctrl+p to cycle through previous commands
 >import os
 >print('my pid is {}'.format(os.getpid()))
 >end
+my pid is 1337
 ```
