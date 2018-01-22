@@ -1,0 +1,3 @@
+first attempt was with a buffer, never quite finished it.
+Since without buffer, you can handle arbitrary input lengths.
+This lead to a working second.c attempt :)
