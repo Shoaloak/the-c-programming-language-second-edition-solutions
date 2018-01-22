@@ -35,7 +35,7 @@ int main()
             }
         }
 
-        /* reset and print blanks if nonblank whilse iw */
+        /* reset and print blanks if nonblank whilst inside whitespace */
         if (c != ' ' && iw) {
             for (i = 0; i <= bc; ++i)
                 putchar(' ');
@@ -43,7 +43,13 @@ int main()
             iw = FALSE;
         }
 
-        if (cc >= TABSTOP) {
+        /* tab, reset */
+        if (c == '\t') {
+            cc = 0;
+            iw = FALSE;
+        }
+
+        if (cc == TABSTOP) {
             if (iw) {
                 putchar('\\');
                 putchar('t');
@@ -59,5 +65,6 @@ int main()
             if (!iw && !(c == '\n'))
                 putchar(c);
     }
+
     return 0;
 }
