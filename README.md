@@ -4,6 +4,7 @@ Also known by the authors initials, K&R.
 All solutions will be compiled with --ansi and written in K&R style.
 
 first.c is my first attempt to solve an exercise, so these sources can probably be improved.
+second.c is my second attempt, etc...
 
 ## Debugging
 To debug C programs, try GDB: The GNU Project Debugger.
@@ -19,7 +20,7 @@ run program with break @ main:  start
 (re)run program:                run (or r)
 set breakpoint:                 break (or b) [file:] function
 set temp breakpoint:            tbreak function
-remove breakpoints:             clear
+remove breakpoint:              clear [line]
 next instruction:               next (or n)
 show source code                list [file:] function (or line number)
 <enter>:                        execute previous gdb command
