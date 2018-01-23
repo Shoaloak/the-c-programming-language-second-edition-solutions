@@ -2,6 +2,7 @@
 #define TABSTOP 8
 #define TRUE    1
 #define FALSE   0
+#define DEBUG   0   /* 0 = print tab, 1 = print "\t" */
 
 /* replace strings of blanks by the minimum number of tabs */
 int main()
@@ -9,7 +10,6 @@ int main()
     int i, c;
     int iw;     /* inside whitespace */
     int cc;     /* character counter */
-    int ci;     /* character index */
     int bc;     /* blank counter */
 
     iw = FALSE;
@@ -51,8 +51,11 @@ int main()
 
         if (cc == TABSTOP) {
             if (iw) {
-                putchar('\\');
-                putchar('t');
+                if (DEBUG) {
+                    putchar('\\');
+                    putchar('t');
+                } else
+                    putchar('\t');
             }
             else if (!(c == '\n'))
                 putchar(c);

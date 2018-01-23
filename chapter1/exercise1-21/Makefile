@@ -1,2 +1,2 @@
-detabmake: second.c
-	gcc -ansi -g -o entab second.c
+entabmake: second.c
+	gcc -ansi -g -Wall -o entab second.c
